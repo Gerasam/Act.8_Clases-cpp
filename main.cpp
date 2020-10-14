@@ -17,6 +17,7 @@ main(){
     lab.agregarFinal(pc2);
 
     lab.mostrar();
+    //cout<<pc1<<pc2;
 
     getch();
     return 0;

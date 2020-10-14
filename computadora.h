@@ -1,6 +1,7 @@
 #ifndef COMPUTADORA_H
 #define COMPUTADORA_H
 
+#include<iomanip>
 #include<iostream>
 using namespace std;
 
@@ -22,6 +23,17 @@ public:
     float getRam();
     void setHdd(int v);
     int getHdd();
+    friend ostream& operator<<(ostream &out, const Computadora &c){
+        
+        out<<left;
+        out<< setw(10) <<c.system;
+        out<< setw(10) <<c.name;
+        out<< setw(8) <<c.ram;
+        out<< setw(8) <<c.hdd;
+        out<<endl;
+
+        return out;
+    }
 };
 
 

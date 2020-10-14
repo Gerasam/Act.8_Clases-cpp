@@ -19,14 +19,22 @@ void Laboratorio::agregarFinal(const Computadora &c)
 
 void Laboratorio::mostrar()
 {
+    cout<<left;
+    cout<<setw(10)<<"system";
+    cout<<setw(10)<<"nombre";
+    cout<<setw(8)<<"RAM";
+    cout<<setw(8)<<"HDD";
+    cout<<endl;
     for (size_t i = 0; i < cont; i++)
     {
         Computadora &c = arreglo[i];
-        cout<<"Sistema_operativo: "<< c.getSystem()<<endl;
-        cout<<"Nombre: "<< c.getName()<<endl;
-        cout<<"Ram: "<< c.getRam()<<endl;
-        cout<<"HDD: "<< c.getHdd()<<endl;
-        cout<<endl;
+        cout<<c;
+        
+        //cout<<"Sistema_operativo: "<< c.getSystem()<<endl;
+        //cout<<"Nombre: "<< c.getName()<<endl;
+        //cout<<"Ram: "<< c.getRam()<<endl;
+        //cout<<"HDD: "<< c.getHdd()<<endl;
+        //cout<<endl;
     }
     
 }
