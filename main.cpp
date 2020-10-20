@@ -28,6 +28,8 @@ main(){
 
     lab.mostrar();
     //cout<<pc1<<pc2;
+    lab.respaldar__tabla();
+    lab.respaldar();//linea-linea
 
     getch();
     return 0;

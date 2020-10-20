@@ -1,4 +1,5 @@
 #include"laboratorio.h"
+#include<fstream>
 
 Laboratorio::Laboratorio(){
     cont = 0;
@@ -37,4 +38,35 @@ void Laboratorio::mostrar()
         //cout<<endl;
     }
     
+}
+void Laboratorio::respaldar__tabla()
+{
+    ofstream archivo("Computadoras_tabla.txt");
+    if(archivo.is_open()){
+        archivo<<left;
+        archivo<<setw(10)<<"System";
+        archivo<<setw(10)<<"Nombre";
+        archivo<<setw(8)<<"RAM";
+        archivo<<setw(8)<<"HDD";
+        archivo<<endl;
+        for (size_t i = 0; i < cont; i++){
+            Computadora &c = arreglo[i];
+            archivo<<c;
+        }
+    }
+    archivo.close();
+}
+void Laboratorio::respaldar()//linea-linea
+{
+    ofstream archivo("Computadoras.txt");
+    if(archivo.is_open()){
+        for (size_t i = 0; i < cont; i++){
+            Computadora &c = arreglo[i];
+            archivo<<c.getSystem()<<endl;
+            archivo<<c.getName()<<endl;
+            archivo<<c.getRam()<<endl;
+            archivo<<c.getHdd()<<endl;
+        }
+    }
+    archivo.close();
 }
