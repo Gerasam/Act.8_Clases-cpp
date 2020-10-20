@@ -1,0 +1,12 @@
+Windows
+hp
+8
+1000
+Linux
+Asus
+16.18
+2000
+ios
+mac
+12
+1000

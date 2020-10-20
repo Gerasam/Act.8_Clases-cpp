@@ -70,3 +70,37 @@ void Laboratorio::respaldar()//linea-linea
     }
     archivo.close();
 }
+void Laboratorio::recuperar()
+{
+    ifstream archivo("Computadoras.txt");
+    if (archivo.is_open())
+    {
+        string tem;
+        float ram;
+        int hdd;
+        Computadora c;
+        while (true)
+        {
+            getline(archivo,tem);
+            if(archivo.eof())
+            {
+                break;
+            }
+            c.setSystem(tem);
+
+            getline(archivo,tem);
+            c.setName(tem);
+
+            getline(archivo,tem);
+            ram=stof(tem);
+            c.setRam(ram);
+
+            getline(archivo,tem);
+            hdd=stoi(tem);
+            c.setHdd(hdd);
+        
+            agregarFinal(c);
+        }
+    }
+    archivo.close();
+}

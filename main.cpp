@@ -4,6 +4,11 @@
 using namespace std;
 
 main(){
+    Laboratorio lab;
+    lab.recuperar();
+    cout<<endl;
+    lab.mostrar();
+    /*
     cout<<endl;
     Computadora pc1 = Computadora("Windows","hp",8.0,1000);
     
@@ -30,6 +35,7 @@ main(){
     //cout<<pc1<<pc2;
     lab.respaldar__tabla();
     lab.respaldar();//linea-linea
+    */
 
     getch();
     return 0;

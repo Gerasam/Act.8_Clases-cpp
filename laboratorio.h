@@ -13,6 +13,7 @@ public:
     void mostrar();
     void respaldar();
     void respaldar__tabla();
+    void recuperar();
 
     friend Laboratorio& operator<<(Laboratorio &l, const Computadora &c)
     {
