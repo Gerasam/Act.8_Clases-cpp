@@ -20,8 +20,8 @@ void Laboratorio::agregarFinal(const Computadora &c)
 void Laboratorio::mostrar()
 {
     cout<<left;
-    cout<<setw(10)<<"system";
-    cout<<setw(10)<<"nombre";
+    cout<<setw(10)<<"System";
+    cout<<setw(10)<<"Nombre";
     cout<<setw(8)<<"RAM";
     cout<<setw(8)<<"HDD";
     cout<<endl;

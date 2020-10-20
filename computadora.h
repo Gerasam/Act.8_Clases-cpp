@@ -7,7 +7,6 @@ using namespace std;
 
 class Computadora
 {
-public:
     string system;
     string name;
     float ram;
@@ -33,6 +32,24 @@ public:
         out<<endl;
 
         return out;
+    }
+    friend istream& operator>>(istream &in, Computadora &c){
+        
+
+        cout<<"System: ";
+        getline(cin, c.system);
+        
+
+        cout<<"Nombre: ";
+        getline(cin, c.name);        
+
+        cout<<"RAM: ";
+        cin>>c.ram;
+
+        cout<<"HDD: ";
+        cin>>c.hdd; 
+        
+        return in;
     }
 };
 
